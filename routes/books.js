@@ -76,7 +76,7 @@ router.get("/api/books/:id", async (req, res) => {
   }
 });
 
-router.post("api/books/:id", async (req, res) => {
+router.delete("api/books/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const book = await Books.findByIdAndDelete(id);
@@ -92,7 +92,7 @@ router.post("api/books/:id", async (req, res) => {
   }
 });
 
-router.post("/api/books/:id", async (req, res) => {
+router.post("/api/books-update/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const {
